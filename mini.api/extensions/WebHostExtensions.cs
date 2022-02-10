@@ -6,7 +6,7 @@ using Polly;
 namespace mini.api.extensions;
 public static class WebHostExtensions
 {
-    public static void MigrateAndSeedDatabase(this WebApplication host)
+    public static void MigrateAndSeedDatabase(this IHost host)
     {
         host.MigrateDbContext<MiniApiDbContext>((context, services) =>
         {
