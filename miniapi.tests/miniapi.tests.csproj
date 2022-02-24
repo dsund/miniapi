@@ -24,8 +24,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\mini.api\miniapi.csproj" />
-  </ItemGroup>
-
 </Project>
