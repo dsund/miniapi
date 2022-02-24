@@ -27,10 +27,10 @@ public class MiniApiApplicationFactory : WebApplicationFactory<Program>
 
         var host = base.CreateHost(builder);
 
-        using var scope = host.Services.CreateScope();
-        var services = scope.ServiceProvider;
-        using var dbContext = services.GetRequiredService<MiniApiDbContext>();
-        dbContext.Database.EnsureCreated();
+        //using var scope = host.Services.CreateScope();
+        //var services = scope.ServiceProvider;
+        //using var dbContext = services.GetRequiredService<MiniApiDbContext>();
+        //dbContext.Database.EnsureCreated();
         return host;
     }
 

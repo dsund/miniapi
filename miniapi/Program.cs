@@ -2,6 +2,7 @@ using mini.api.extensions;
 using mini.api.infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.SetupDatabase();
 var app = builder.Build();
 

@@ -21,6 +21,7 @@ public static class WebHostExtensions
         var logger = services.GetRequiredService<ILogger<TContext>>();
         var env = services.GetRequiredService<IWebHostEnvironment>();
         using var context = services.GetService<TContext>()!;
+        //context.Database.EnsureCreated();
 
         try
         {

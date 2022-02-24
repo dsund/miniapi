@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\mini.api\mini.api.csproj" />
+    <ProjectReference Include="..\mini.api\miniapi.csproj" />
   </ItemGroup>
 
 </Project>
