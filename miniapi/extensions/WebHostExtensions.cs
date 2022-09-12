@@ -1,9 +1,9 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using mini.api.infrastructure;
+using miniapi.infrastructure;
 using Polly;
 
-namespace mini.api.extensions;
+namespace miniapi.extensions;
 public static class WebHostExtensions
 {
     public static void MigrateAndSeedDatabase(this IHost host)

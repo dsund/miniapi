@@ -1,4 +1,4 @@
-﻿namespace mini.api.domain;
+﻿namespace miniapi.domain;
 public class Item
 {
     public Guid Id { get; set; }

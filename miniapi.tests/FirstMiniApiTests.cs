@@ -1,10 +1,10 @@
 using FluentAssertions;
-using mini.api.domain;
-using mini.api.tests.common;
+using miniapi.domain;
+using miniapi.tests.common;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace mini.api.tests;
+namespace miniapi.tests;
 public class FirstMiniApiTests : FunctionalTestFixture
 {
     [Fact]

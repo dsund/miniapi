@@ -1,5 +1,5 @@
-using mini.api.extensions;
-using mini.api.infrastructure;
+using miniapi.extensions;
+using miniapi.infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

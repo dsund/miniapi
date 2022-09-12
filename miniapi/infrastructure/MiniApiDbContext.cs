@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using mini.api.domain;
+using miniapi.domain;
 
-namespace mini.api.infrastructure;
+namespace miniapi.infrastructure;
 public class MiniApiDbContext : DbContext
 {
     private readonly string schema;
