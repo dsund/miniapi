@@ -2,7 +2,7 @@
 using System.Net.Http;
 using Xunit;
 
-namespace mini.api.tests.common;
+namespace miniapi.tests.common;
 public class FunctionalTestFixture : IClassFixture<MiniApiApplicationFactory>, IDisposable
 {
     internal readonly MiniApiApplicationFactory factory;

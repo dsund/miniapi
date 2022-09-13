@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using mini.api.infrastructure;
+using miniapi.infrastructure;
 
 #nullable disable
 
-namespace mini.api.infrastructure.migrations.miniapi
+namespace miniapi.infrastructure.migrations.miniapi
 {
     [DbContext(typeof(MiniApiDbContext))]
     partial class MiniApiDbContextModelSnapshot : ModelSnapshot

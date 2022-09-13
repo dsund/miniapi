@@ -1,5 +1,5 @@
-using mini.api.extensions;
-using mini.api.infrastructure;
+using miniapi.extensions;
+using miniapi.infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,10 +7,7 @@ builder.SetupDatabase();
 var app = builder.Build();
 
 app.MigrateAndSeedDatabase();
-
-
 app.MapGet("/", () => "Hello World!");
-
 app.MapGet("/items/", (HttpContext context) =>
 {
     var dbContext = context.RequestServices.GetRequiredService<MiniApiDbContext>();

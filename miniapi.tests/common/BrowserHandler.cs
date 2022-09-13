@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace mini.api.tests.common;
+namespace miniapi.tests.common;
 public class BrowserHandler : DelegatingHandler
 {
     private CookieContainer _cookieContainer = new CookieContainer();

@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using mini.api.infrastructure;
+using miniapi.infrastructure;
 
 #nullable disable
 
-namespace mini.api.infrastructure.migrations.miniapi
+namespace miniapi.infrastructure.migrations.miniapi
 {
     [DbContext(typeof(MiniApiDbContext))]
     [Migration("20220210114609_MiniApiDbContext_Initial")]
