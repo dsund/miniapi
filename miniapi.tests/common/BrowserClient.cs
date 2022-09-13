@@ -1,6 +1,6 @@
 ﻿using System.Net.Http;
 
-namespace mini.api.tests.common;
+namespace miniapi.tests.common;
 public class BrowserClient : HttpClient
 {
     public BrowserClient(BrowserHandler browserHandler)

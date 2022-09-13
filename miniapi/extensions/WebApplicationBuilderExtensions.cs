@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
-using mini.api.infrastructure;
+using miniapi.infrastructure;
 using System.Reflection;
 
-namespace mini.api.extensions;
+namespace miniapi.extensions;
 public static class WebApplicationBuilderExtensions
 {
     public static WebApplicationBuilder SetupDatabase(this WebApplicationBuilder builder)

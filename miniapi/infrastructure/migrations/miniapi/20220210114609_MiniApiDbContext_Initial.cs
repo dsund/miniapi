@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace mini.api.infrastructure.migrations.miniapi
+namespace miniapi.infrastructure.migrations.miniapi
 {
     public partial class MiniApiDbContext_Initial : Migration
     {

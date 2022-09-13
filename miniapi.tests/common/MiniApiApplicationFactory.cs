@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
-using mini.api.domain;
-using mini.api.infrastructure;
+using miniapi.domain;
+using miniapi.infrastructure;
 using System.Threading.Tasks;
 
-namespace mini.api.tests.common;
+namespace miniapi.tests.common;
 public class MiniApiApplicationFactory : WebApplicationFactory<Program>
 {
     protected override IHost CreateHost(IHostBuilder builder)
