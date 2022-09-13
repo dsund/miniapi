@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using miniapi.domain;
 using miniapi.infrastructure;
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace miniapi.tests.common;
@@ -15,22 +15,28 @@ public class MiniApiApplicationFactory : WebApplicationFactory<Program>
   {
     builder.ConfigureServices(services =>
     {
-      var root = new InMemoryDatabaseRoot();
+      var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof(DbContextOptions<MiniApiDbContext>));
+      if (descriptor != null)
+        services.Remove(descriptor);
+      services.AddDbContext<MiniApiDbContext>(options => options.UseInMemoryDatabase("Testing"));
 
-      builder.ConfigureServices(services =>
-          {
-          services.RemoveAll(typeof(DbContextOptions<MiniApiDbContext>));
-          services.AddDbContext<MiniApiDbContext>(options =>
-                  options.UseInMemoryDatabase("Testing", root));
-        });
+      var sp = services.BuildServiceProvider();
+      using (var scope = sp.CreateScope())
+      using (var appContext = scope.ServiceProvider.GetRequiredService<MiniApiDbContext>())
+      {
+        try
+        {
+          appContext.Database.EnsureCreated();
+        }
+        catch (Exception ex)
+        {
+          //Log errors or do anything you think it's needed
+          throw;
+        }
+      }
     });
 
     var host = base.CreateHost(builder);
-
-    //using var scope = host.Services.CreateScope();
-    //var services = scope.ServiceProvider;
-    //using var dbContext = services.GetRequiredService<MiniApiDbContext>();
-    //dbContext.Database.EnsureCreated();
     return host;
   }
 
